@@ -1,0 +1,28 @@
+{
+  "name": "file-sharing",
+  "version": "1.0.0",
+  "description": "File Sharing via link or email smtp ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subham-kumar-au26"
+  },
+  "author": "Subham Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
