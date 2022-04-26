@@ -1,9 +1,17 @@
 const express = require('express');  // import express libraries 
 const app = express(); //call express
 const path = require('path'); //path is node.js inbuilt module
+const cors = require('cors');
 
 const connectDB = require('./config/db');
 connectDB();
+
+//cors - serve multiple origin(domain, port)
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENT.split(',')
+}
+app.use(cors(corsOptions));
+
 
 //static middleware of express 
 app.use(express.static('public'))

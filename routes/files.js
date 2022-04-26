@@ -168,7 +168,7 @@ router.post('/send', async (req, res) => {
       to: emailTo,
       subject: 'SS file sharing',
       text: `${emailFrom} shared a file with you.`,
-      html: require('../services/emailtemplate')({
+      html: require('../services/')({
                 emailFrom, 
                 downloadLink: `${process.env.app_base_url}/files/${file.uuid}?source=email` ,
                 size: parseInt(file.size/1000) + ' KB',
