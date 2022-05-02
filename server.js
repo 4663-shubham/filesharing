@@ -8,9 +8,9 @@ connectDB();
 
 //cors - serve multiple origin(domain, port)
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENT.split(',')
+    origin: process.env.ALLOWED_CLIENTS.split(',')
 }
-app.use(cors(corsOptions));
+app.use(cors(corsOptions))
 
 
 //static middleware of express 
@@ -28,6 +28,10 @@ app.use('/files/download', require('./routes/download'))
 //template engine
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
+
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + "/frontend/index.html")    
+})
 
 
 
